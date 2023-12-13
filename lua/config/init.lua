@@ -13,6 +13,31 @@ vim.opt.rtp:prepend(lazypath)
 
 require('config.globals')
 require('config.options')
+require('config.keymaps')
 
-require("lazy").setup('plugins')
+local opts = {
+	defaults = {
+		lazy = true,
+	},
+	install = {
+		colorscheme = { "onedark" },
+	},
+	rtp = {
+		disabled_plugins = {
+			"gzip",
+			"matchit",
+			"matchparen",
+			"netrw",
+			"netrwPlugin",
+			"tarPlugin",
+			"tohtml",
+			"tutor",
+			"zipPlugin",
+		},
+	},
+	change_detection = {
+		notify = false,
+	},
+}
+require("lazy").setup('plugins', opts)
 
