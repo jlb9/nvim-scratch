@@ -17,3 +17,6 @@ keymap.set('n', '<leader>sv', ':vsplit<CR>', opts) --Split Vertically
 keymap.set('n', '<leader>sh', ':split<CR>', opts) -- Slpit Horizontally
 keymap.set('n', '<leader>sm', ':MaximizerToggle<CR>', opts) --Toggle Minimize
 
+-- Comments 
+vim.api.nvim_set_keymap('n', 'C-_>', 'gcc', { noremap = false, silent = false })
+vim.api.nvim_set_keymap('v', 'C-_>', 'gcc', { noremap = false, silent = false })
