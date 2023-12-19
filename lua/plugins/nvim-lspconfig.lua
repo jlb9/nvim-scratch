@@ -111,7 +111,8 @@ local config = function()
 		on_attach = on_attach,
 		cmd = {
 			"clangd",
-			"--offset-encoding=utf-16",
+		--	"--offset-encoding=utf-16",
+			"offset-encoding=utf-8",
 		},
 	})
 
